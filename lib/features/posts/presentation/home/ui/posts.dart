@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../../../core/utils/const.dart';
 
@@ -29,6 +30,7 @@ class Posts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(imageUrl);
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       padding: const EdgeInsets.all(12),
@@ -82,16 +84,27 @@ class Posts extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Container(
+                  height: Get.height / 3,
+                  width: Get.width,
                   decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(imageUrl!),
-                ),
+                      fit: BoxFit.fill,
+                    ),
               )),
             ),
-          if (imageCache != null)
-            Image.memory(imageCache!)
-          else
-            const Icon(Icons.image_not_supported),
+          if (imageCache != null&&imageUrl==null)
+            Container(
+                height: Get.height / 3,
+                width: Get.width,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: MemoryImage(imageCache!),
+                    fit: BoxFit.fill,
+                  ),
+                )),
+          // else
+          //   const Icon(Icons.image_not_supported),
           // Likes and Comments
           const SizedBox(height: 10),
           const Divider(),

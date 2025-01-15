@@ -20,10 +20,10 @@ class GoogleSignInService extends GetxController {
     } else {}
   }
 
-  final GoogleSignInService googleSignInService = GoogleSignInService();
+
 
   void handleGoogleSignIn() async {
-    final user = await googleSignInService.signInWithGoogle();
+    final user = await signInWithGoogle();
     if (user != null) {
       print('User signed in: ${user.displayName}, ${user.email}');
       // Navigate to the home page or dashboard
