@@ -30,7 +30,7 @@ class Posts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(imageUrl);
+    // print(imageUrl);
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       padding: const EdgeInsets.all(12),
@@ -80,7 +80,7 @@ class Posts extends StatelessWidget {
             ),
           if (content.isNotEmpty) const SizedBox(height: 10),
           // Post Image
-          if (imageUrl != null)
+          if (imageUrl != null&&imageCache==null)
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Container(
@@ -93,16 +93,8 @@ class Posts extends StatelessWidget {
                     ),
               )),
             ),
-          if (imageCache != null&&imageUrl==null)
-            Container(
-                height: Get.height / 3,
-                width: Get.width,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: MemoryImage(imageCache!),
-                    fit: BoxFit.fill,
-                  ),
-                )),
+          if (imageCache != null || imageUrl==null)
+          Image.memory(imageCache!),
           // else
           //   const Icon(Icons.image_not_supported),
           // Likes and Comments
