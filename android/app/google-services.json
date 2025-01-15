@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "418371120339",
+    "project_id": "sign-social-c4270",
+    "storage_bucket": "sign-social-c4270.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418371120339:android:a9a12cd3fa792566fb3826",
+        "android_client_info": {
+          "package_name": "com.ahmadalfrehan.social_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418371120339-pln5okk8h344a7dsar86l8ocoqloed8d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ahmadalfrehan.social_app",
+            "certificate_hash": "33c406ecc5f8d1f79e077b8967c947c0a8d03fb9"
+          }
+        },
+        {
+          "client_id": "418371120339-k99oj1m233ljua3hp8ohd08ne5vpq5pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3vQz80Q2ze_tS1DBPR3xVVwc3nR2kWo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418371120339-k99oj1m233ljua3hp8ohd08ne5vpq5pu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
